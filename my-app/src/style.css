@@ -57,7 +57,7 @@ those other properties)
 main {
   padding: 57px 27px;
   color: white;
-  background-image: url(../images/react-icon-large.png);
+  background-image: url(../public/images/react-icon-large.png);
   background-repeat: no-repeat;
   background-position: right 75%;
 }
