@@ -18,7 +18,8 @@ const Wrapper = styled.div`
   margin-top: 26px;
   padding-right: 77px;
   padding-left: 77px;
-
+  align-items: center;
+  max-width: 700px;
   img {
     width: 395.91px;
     height: 232px;

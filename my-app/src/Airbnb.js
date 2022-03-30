@@ -36,6 +36,11 @@ function Airbnb() {
 
 const Wrapper = styled.div`
   display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+  flex-direction: row; /* ADD */
+  /* max-width: 700px; */
 `;
 
 export default Airbnb;
