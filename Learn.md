@@ -12,6 +12,6 @@ What should be done?
 How should it be done
 => 어떻게 해야하는지 every step 규율 강령 가이드 명시해줭 그러면 그에따라서 할겡
 
-### js에 html문법을 적용한것 jsx
+### figma
 
-regular dom 문법이랑 어떻게 다를까?
+- figma로 간단하게 css하는거 배웠다. 엄청 응용하고 적용하기 쉽다.
