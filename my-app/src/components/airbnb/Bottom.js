@@ -1,19 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 
-function Bottom() {
+function Bottom(props) {
   return (
     <Wrapper>
-      <img src="/images/katie-zaferes.png" alt="" className="hero" />
+      <img src={`../images/${props.coverImg}`} alt="" className="hero" />
       <div className="card--stats">
-        <img src="/images/star.png" alt="" className="star" />
-        <span>5.0</span>
-        <span className="gray">(6) • </span>
-        <span className="gray">USA</span>
+        <img src="../images/star.png" alt="" className="star" />
+        <span>{props.rating}</span>
+        <span className="gray">({props.reviewCount}) • </span>
+        <span className="gray">{props.location}</span>
       </div>
-      <p>Life Lessons with Katie Zaferes</p>
+      <p>{props.title}</p>
       <p>
-        <span className="bold">From $136</span> / person
+        <span className="bold">From ${props.price}</span> / person
       </p>
     </Wrapper>
   );

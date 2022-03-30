@@ -2,53 +2,40 @@ import "./Airbnb.css";
 import Main from "./components/airbnb/Main";
 import Navbar from "./components/airbnb/Navbar";
 import Bottom from "./components/airbnb/Bottom";
-
-/*
-Challenge 2:
-Given an array of strings, return an array where 
-the first letter of each string is capitalized
-*/
-
-const names = ["alice", "bob", "charlie", "danielle"];
-
-const capitalizedFunc = (array) => {
-  const capitalized = array.map((elem) => {
-    // console.log(elem[0]);
-    let [a, ...rest] = elem;
-    let result1 = a.toUpperCase().toString() + rest.join("");
-    let result2 = elem[0] + elem.slice(0);
-    return result1;
-  });
-  return capitalized;
-};
-console.log(capitalizedFunc(names));
-
-/*
-Challenge 3:
-Given an array of strings, return an array of strings that wraps each
-of the original strings in an HTML-like <p></p> tag.
-
-E.g. given: ["Bulbasaur", "Charmander", "Squirtle"]
-return: ["<p>Bulbasaur</p>", "<p>Charmander</p>", "<p>Squirtle</p>"]
-*/
-
-const pokemon = ["Bulbasaur", "Charmander", "Squirtle"];
-// -->          ["<p>Bulbasaur</p>", "<p>Charmander</p>", "<p>Squirtle</p>"]
-// Your code here
-const addingPtagFung = (array) => {
-  let result = array.map((elem) => `<p>${elem}</p>`);
-  return result;
-};
-console.log(addingPtagFung(pokemon));
+import dataArray from "./data.js";
+import styled from "styled-components";
 
 function Airbnb() {
+  let count = 1;
+  const makingCard = dataArray.map((data) => {
+    count++;
+    return (
+      <Bottom
+        key={count}
+        id={data.id}
+        title={data.title}
+        descrpition={data.descrpition}
+        price={data.price}
+        coverImg={data.coverImg}
+        rating={data.stats.rating}
+        reviewCount={data.stats.reviewCount}
+        location={data.location}
+        openSpots={data.openSpots}
+      />
+    );
+  });
+  count = null;
   return (
     <>
       <Navbar />
       <Main />
-      <Bottom />
+      <Wrapper> {makingCard}</Wrapper>
     </>
   );
 }
+
+const Wrapper = styled.div`
+  display: flex;
+`;
 
 export default Airbnb;
