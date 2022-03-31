@@ -15,9 +15,9 @@ left - figma / right - mine
   지구본 아이콘 적용하려다가 진짜 오랜만에 다시 fontawesome도 사용하게 됐다. 폰트어썸은 거의 4년전에 학원에서 프로젝트 할 떄 처음 접했던 것 같은데 반갑더라(?). 리액트
   참고한 문서와 페이지들은 아래와 같다.
 
-- - [React | Font Awesome Docs](https://fontawesome.com/v5/docs/web/use-with/react)
-- - [fontawesome.com](https://fontawesome.com/)
-- - [mui](https://mui.com/)로 해결 못하는(?) 자잘한 아이콘들을 갖다 써보면 좋을 것 같다.
+  - [React | Font Awesome Docs](https://fontawesome.com/v5/docs/web/use-with/react)
+  - [fontawesome.com](https://fontawesome.com/)
+  - [mui](https://mui.com/)로 해결 못하는(?) 자잘한 아이콘들을 갖다 써보면 좋을 것 같다.
 
 ## Recap
 
