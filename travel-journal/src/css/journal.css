@@ -1,0 +1,67 @@
+.journal {
+  margin-top: 55px;
+  display: flex;
+
+  border-bottom: 1px solid #f5f5f5;
+}
+.journal .journal_img {
+  margin-right: 9px;
+  margin-bottom: 10px;
+}
+.journal .journal_img > img {
+  width: 125px;
+  height: 168px;
+  border-radius: 5px;
+}
+
+.journal_location .j_location {
+  margin-bottom: 7px;
+  line-height: 12px;
+  font-weight: 400;
+  font-size: 10.24px;
+  letter-spacing: 0.17em;
+  margin-right: 12px;
+}
+.journal_location .j_view {
+  margin-bottom: 4px;
+  color: #918e9b;
+  font-weight: 400;
+  font-size: 10.24px;
+  line-height: 12px;
+  text-decoration-line: underline;
+}
+.journal_title {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  margin-bottom: 7px;
+  color: #2b283a;
+}
+.journal_description {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+}
+.j_date {
+  font-weight: 700;
+  font-size: 10.24px;
+  line-height: 12px;
+  margin-bottom: 9px;
+  color: #2b283a;
+}
+
+.j_location {
+  font-weight: 400;
+  font-size: 10.24px;
+  line-height: 150%;
+  /* or 15px */
+  max-width: 326px;
+  color: #2b283a;
+}
+
+.faLocationDot {
+  width: 7px;
+  height: 9.55px;
+  color: #f55a5a;
+  margin-right: 4px;
+}
