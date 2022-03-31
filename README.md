@@ -6,5 +6,5 @@
 
 2022_03_01 기준,</br>
 
-- [AirBnB page](https://github.com/SphereSRYN/React-Course2022/tree/main/my-app){:target="\_blank"}
-- [Travel Journal](https://github.com/SphereSRYN/React-Course2022/tree/main/travel-journal){:target="\_blank"}
+- [AirBnB page](https://github.com/SphereSRYN/React-Course2022/tree/main/my-app)
+- [Travel Journal](https://github.com/SphereSRYN/React-Course2022/tree/main/travel-journal)
