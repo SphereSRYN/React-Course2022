@@ -1,29 +1,40 @@
 import React from "react";
 import styled from "styled-components";
 
-function Bottom(props) {
+function Bottom(/*{ data }*/ data) {
+  console.log("props🎈, ", data);
   let badgeText;
-  if (props.openSpots === 0) {
+  if (data.openSpots === 0) {
     badgeText = "SOLD OUT";
-  } else if (props.location === "Online") {
+  } else if (data["stats"].location === "Online") {
     badgeText = "ONLINE";
   }
 
   return (
     <Wrapper>
-      {/* {!props.openSpots && <Badge>SOLDOUT</Badge>} */}
-      {/* {badgeText ? <div className="badge">{badgeText}</div> : ""} */}
+      {/*
+      
+      방법 1
+      {!props.openSpots && <Badge>SOLDOUT</Badge>} */}
+      {/* 
+      
+      방법 2
+      {badgeText ? <div className="badge">{badgeText}</div> : ""} */}
+
+      {/*
+      
+      방법 3 */}
       {badgeText && <div className="badge">{badgeText}</div>}
-      <img src={`../images/${props.coverImg}`} alt="" className="hero" />
+      <img src={`../images/${data.coverImg}`} alt="" className="hero" />
       <div className="card--stats">
         <img src="../images/star.png" alt="" className="star" />
-        <span>{props.rating}</span>
-        <span className="gray">({props.reviewCount}) • </span>
-        <span className="gray">{props.location}</span>
+        <span>{data.rating}</span>
+        <span className="gray">({data["stats"].reviewCount}) • </span>
+        <span className="gray">{data["stats"].location}</span>
       </div>
-      <p>{props.title}</p>
+      <p>{data.title}</p>
       <p>
-        <span className="bold">From ${props.price}</span> / person
+        <span className="bold">From ${data.price}</span> / person
       </p>
     </Wrapper>
   );

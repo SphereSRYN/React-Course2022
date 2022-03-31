@@ -11,16 +11,22 @@ function Airbnb() {
     count++;
     return (
       <Bottom
-        key={count}
-        id={data.id}
-        title={data.title}
-        descrpition={data.descrpition}
-        price={data.price}
-        coverImg={data.coverImg}
-        rating={data.stats.rating}
-        reviewCount={data.stats.reviewCount}
-        location={data.location}
-        openSpots={data.openSpots}
+        /*
+         key={count}
+        //key={data.id}
+        // id={data.id}
+        // title={data.title}
+        // descrpition={data.descrpition}
+        // price={data.price}
+        // coverImg={data.coverImg}
+        // rating={data.stats.rating}
+        // reviewCount={data.stats.reviewCount}
+        // location={data.location}
+        // openSpots={data.openSpots}
+        data={data}
+        */
+        key={data.id}
+        {...data}
       />
     );
   });
