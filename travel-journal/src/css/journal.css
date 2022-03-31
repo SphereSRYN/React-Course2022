@@ -1,12 +1,13 @@
 .journal {
-  margin-top: 55px;
+  margin-top: 20px;
   display: flex;
-
+  margin-left: 40px;
   border-bottom: 1px solid #f5f5f5;
+  padding-bottom: 14px;
 }
 .journal .journal_img {
   margin-right: 9px;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
 .journal .journal_img > img {
   width: 125px;

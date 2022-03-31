@@ -1,7 +1,7 @@
 # It looks like this
 
-- original one : https://www.figma.com/file/QG4cOExkdbIbhSfWJhs2gs/Travel-Journal?node-id=0%3A1
-  ![original one](./public/images/result_from_figma.JPG)
+![original one](./public/images/result.JPG)
 
-- mine :</br>
-  ![mine](./public/images/result_mine.JPG)
+<div style="text-align: center">
+left - figma / right - mine
+</div>
