@@ -9,6 +9,16 @@ left - figma / right - mine
 - **components, props**:
   어떤 언어에서든... 결국에는 복잡하게 그냥 나열된 긴 코드를 가장 단순하고 작은 핵심요소로 이루어진 모듈로 만드는것에 대한 중요성을 강조하곤 하는데, section 2를 수강하며 다시금 simplification의 중요성을 느낀다.
 
+## I tried
+
+- **React | Font Awesome**
+  지구본 아이콘 적용하려다가 진짜 오랜만에 다시 fontawesome도 사용하게 됐다. 폰트어썸은 거의 4년전에 학원에서 프로젝트 할 떄 처음 접했던 것 같은데 반갑더라(?). 리액트
+  참고한 문서와 페이지들은 아래와 같다.
+
+- - [React | Font Awesome Docs](https://fontawesome.com/v5/docs/web/use-with/react)
+- - [fontawesome.com](https://fontawesome.com/)
+- - [mui](https://mui.com/)로 해결 못하는(?) 자잘한 아이콘들을 갖다 써보면 좋을 것 같다.
+
 ## Recap
 
 - 확실히 Props, mapping data 그리고 css에 좀더 익숙해지게 됐다.
