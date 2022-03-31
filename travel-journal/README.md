@@ -2,9 +2,12 @@
 
 ![original one](./public/images/result.JPG)
 
-<div style="text-align: center">
 left - figma / right - mine
-</div>
+
+## I learned
+
+- **components, props**:
+  어떤 언어에서든... 결국에는 복잡하게 그냥 나열된 긴 코드를 가장 단순하고 작은 핵심요소로 이루어진 모듈로 만드는것에 대한 중요성을 강조하곤 하는데, section 2를 수강하며 다시금 simplification의 중요성을 느낀다.
 
 ## Recap
 
