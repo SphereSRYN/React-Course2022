@@ -1,7 +1,7 @@
 # It looks like this
 
 - original one : https://www.figma.com/file/QG4cOExkdbIbhSfWJhs2gs/Travel-Journal?node-id=0%3A1
-  ![original one](https://github.com/SphereSRYN/React-Course2022/blob/main/travel-journal/src/result_from_figma.JPG)
+  ![original one](./public/images/result_from_figma.JPG)
 
 - mine :
-  ![mine](./travel-journal/src/result_mine.JPG)
+  ![mine](./public/images/result_mine.JPG)
