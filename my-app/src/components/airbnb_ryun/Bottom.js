@@ -6,7 +6,7 @@ function Bottom(/*{ data }*/ data) {
   let badgeText;
   if (data.openSpots === 0) {
     badgeText = "SOLD OUT";
-  } else if (data["stats"].location === "Online") {
+  } else if (data.location === "Online") {
     badgeText = "ONLINE";
   }
 
@@ -25,15 +25,15 @@ function Bottom(/*{ data }*/ data) {
       
       방법 3 */}
       {badgeText && <div className="badge">{badgeText}</div>}
-      <img src={`../images/${data.coverImg}`} alt="" className="hero" />
-      <div className="card--stats">
+      <img src={`../images/${data.coverImg}`} alt="" className="cover" />
+      <div className="stats">
         <img src="../images/star.png" alt="" className="star" />
-        <span>{data.rating}</span>
+        <span>{parseFloat(data["stats"].rating).toFixed(1)}</span>
         <span className="gray">({data["stats"].reviewCount}) • </span>
-        <span className="gray">{data["stats"].location}</span>
+        <span className="gray">{data.location}</span>
       </div>
-      <p>{data.title}</p>
-      <p>
+      <p className="title">{data.title}</p>
+      <p className="price">
         <span className="bold">From ${data.price}</span> / person
       </p>
     </Wrapper>
@@ -41,30 +41,53 @@ function Bottom(/*{ data }*/ data) {
 }
 
 const Wrapper = styled.div`
-  margin-top: 49px;
-  margin-left: 37px;
+  margin-top: 32px;
   font-size: 12px;
   width: 175px;
-  .badge {
-    position: absolute;
-    top: 6px;
-    left: 6px;
-    background-color: white;
-    padding: 5px 7px;
-    border-radius: 2px;
-    font-weight: bold;
-  }
-  .hero {
+  position: relative;
+  .cover {
+    width: 176px;
+    height: 235px;
     border-radius: 9px;
-    width: 100%;
+    align-self: center;
+  }
+  .stats {
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
 
   .star {
-    width: 14px;
-    border-radius: 0.5px;
-    margin-top: 9px;
-    margin-right: 2px;
+    height: 14px;
   }
+
+  .title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 5px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .price {
+    margin-top: 4px;
+  }
+
+  .badge {
+    margin: 6px 6px;
+    padding: 5px 5px;
+    position: absolute;
+    width: 61px;
+    height: 20px;
+    background-color: white;
+    font-weight: 400;
+    font-size: 10.24px;
+    line-height: 110%;
+    text-align: center;
+    border-radius: 2px;
+  }
+
   .gray {
     color: gray;
   }

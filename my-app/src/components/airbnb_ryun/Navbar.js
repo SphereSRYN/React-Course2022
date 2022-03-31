@@ -13,7 +13,7 @@ const Wrap = styled.nav`
   height: 70px;
   display: flex;
   background-color: #ffffff;
-  /* border-radius: 2px; */
+  border-radius: 2px;
   box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
   margin-left: 0;
   margin-top: 0;

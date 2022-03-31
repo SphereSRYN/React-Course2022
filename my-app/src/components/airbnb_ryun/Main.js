@@ -4,8 +4,8 @@ function Main() {
   return (
     <Wrapper>
       <img src="/images/photo-grid.png" alt="" />
-      <h1>Online Experiences</h1>
-      <p>
+      <h1 className="hero--header">Online Experiences</h1>
+      <p className="hero--text">
         Join unique interactive activities led by one-of-a-kind hosts—all
         without leaving home.
       </p>
@@ -15,37 +15,29 @@ function Main() {
 
 const Wrapper = styled.div`
   position: relative;
-  margin-top: 26px;
-  padding-right: 77px;
-  padding-left: 77px;
-  align-items: center;
+  margin-top: 30px;
+  /* margin-left: 36px; */
   max-width: 700px;
+  margin-bottom: 0px;
+  h1 {
+    margin-bottom: 16px;
+  }
   img {
+    margin-left: 41px;
     width: 395.91px;
     height: 232px;
+    border-radius: 9px;
   }
-  h1 {
-    margin-top: 32px;
-    width: 347px;
-    height: 40px;
-    left: 36px;
-    line-height: 110%;
-    color: #000000;
-  }
-
   p {
-    width: 320px;
+    margin-top: 0;
+    max-width: 320px;
     height: 56px;
-    /* margin-left: 36px; */
-
-    font-family: "Poppins";
+    font-family: "Poppins", sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 110%;
-    /* or 18px */
-
-    color: #222222;
+    /* border: 1px solid gray; */
   }
 `;
 export default Main;

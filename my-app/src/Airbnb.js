@@ -1,7 +1,7 @@
 import "./Airbnb.css";
-import Main from "./components/airbnb/Main";
-import Navbar from "./components/airbnb/Navbar";
-import Bottom from "./components/airbnb/Bottom";
+import Main from "./components/airbnb_ryun/Main";
+import Navbar from "./components/airbnb_ryun/Navbar";
+import Bottom from "./components/airbnb_ryun/Bottom";
 import dataArray from "./data.js";
 import styled from "styled-components";
 
@@ -34,19 +34,23 @@ function Airbnb() {
   return (
     <>
       <Navbar />
-      <Main />
-      <Wrapper> {makingCard}</Wrapper>
+      <Content>
+        <Main />
+        <CardFlow> {makingCard}</CardFlow>
+      </Content>
     </>
   );
 }
 
-const Wrapper = styled.div`
+const Content = styled.div`
+  margin-left: 37px;
+`;
+const CardFlow = styled.div`
   display: flex;
   flex-wrap: nowrap;
   gap: 20px;
   overflow-x: auto;
-  flex-direction: row; /* ADD */
-  /* max-width: 700px; */
+  flex-direction: row;
 `;
 
 export default Airbnb;
