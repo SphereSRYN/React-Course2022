@@ -4,3 +4,4 @@
   ![original one](https://github.com/SphereSRYN/React-Course2022/blob/main/travel-journal/src/result_from_figma.JPG)
 
 - mine :
+  ![mine](./result_mine.JPG)
