@@ -2,9 +2,9 @@
 
 - tbd
 
-## [I learned](/learn.md)
+## I learned
 
-- [learn.md](/learn.md)
+- [learn.md](learn.md)
 
 ## I tried
 
