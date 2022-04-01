@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  /* flex-direction: row; */
+  align-items: center;
+  height: 65px;
+  background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
+  color: white;
+  padding: 20px;
+}
+
+.header > img {
+  position: relative;
+  width: 31.31px;
+  height: 26.22px;
+}
+
+.header .title {
+  position: relative;
+  font-weight: 700;
+  /* font-size: 20.7482px; */
+  font-size: 1.25rem;
+  line-height: 24px;
+  letter-spacing: -0.1em;
+  margin-left: 7px;
+  margin-right: auto;
+}
+.header .project {
+  /* font-size: 12px; */
+  font-size: 0.75rem;
+  line-height: 15px;
+  text-align: right;
+  font-weight: 500;
+}
