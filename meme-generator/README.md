@@ -4,7 +4,7 @@
 
 ## I learned
 
-- [learn.md](learn.md)
+- [learn.md](https://github.com/SphereSRYN/React-Course2022/blob/main/meme-generator/learned.md)
 
 ## I tried
 
