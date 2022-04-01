@@ -1,3 +1,13 @@
+## Intro
+
+이부분 만들면서 목표가 있다면...
+
+- css
+  에는 혼자 Tailwind를 독학해서 적용해보자.
+  처음 유튭강의 보고 styled-component를 알게됐을 때 너무나 신세계 같고 즐거웠는데, styled-component도 어느정도 한계는 있었다. 정말 하나하나 다 태그로 만들어서 적용해줘야 하는...그런...불편함이랄까?호호 게으른완벽주의자 성향에서 조금 탈피중인 나이지만 조금이나마 효율성을 더 따지는 나이기에 이참에 작은 프로젝트에 tailwind를 적용하면서 배워나갈 생각이다.
+- react
+  ![무엇을배울까용](./what_we_will_learn.jpg)
+
 # I learned
 
 - **pointer-events** https://reactjs.org/docs/events.html#pointer-events
