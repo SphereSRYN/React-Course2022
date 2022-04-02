@@ -44,3 +44,5 @@
 
     3. **When would you want to pass the second option (from answer above) to the state setter function?**
        Whenever you DO need the previous value to determine the new value
+
+  * [you-probably-dont-need-derived-state](https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html)
