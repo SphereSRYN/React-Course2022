@@ -46,3 +46,15 @@
        Whenever you DO need the previous value to determine the new value
 
   * [you-probably-dont-need-derived-state](https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html)
+
+## conditional rendering
+
+      1. What is "conditional rendering"?
+      When we want to only sometimes display something on the page
+      based on a condition of some sort
+
+      2. When would you use &&?
+      When you want to either display something or NOT display it
+
+      3. When would you use a ternary?
+      When you need to decide which thing among 2 options to display

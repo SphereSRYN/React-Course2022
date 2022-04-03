@@ -35,9 +35,6 @@ function App() {
      * correct square in the array.
      *
      * Make sure not to directly modify state!
-     *
-     * Hint: look back at the lesson on updating arrays
-     * in state if you need a reminder on how to do this
      */
     setSquares((prevSquares) => {
       // const newSquares = [];
