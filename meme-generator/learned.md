@@ -58,3 +58,63 @@
 
       3. When would you use a ternary?
       When you need to decide which thing among 2 options to display
+
+## form
+
+      1. 리액트의 큰 약점.(지원해주는 api 물론 존재.)
+      2. [FORM 공식문서](https://reactjs.org/docs/forms.html)
+
+      3. **Controlled Components**
+
+         ```export default function Form() {
+            const [formData, setFormData] = React.useState({
+               firstName: "",
+               lastName: "",
+               email: "",
+            });
+
+            function handleChange(event) {
+               setFormData((prevFormData) => {
+                  return {
+                  ...prevFormData,
+                  [event.target.name]: event.target.value,
+                  };
+               });
+            }
+
+            return (
+               <form>
+                  <input
+                  type="text"
+                  placeholder="First Name"
+                  onChange={handleChange}
+                  name="firstName"
+                  value={formData.firstName}
+                  />
+                  <input
+                  type="text"
+                  placeholder="Last Name"
+                  onChange={handleChange}
+                  name="lastName"
+                  value={formData.lastName}
+                  />
+                  <input
+                  type="email"
+                  placeholder="Email"
+                  onChange={handleChange}
+                  name="email"
+                  value={formData.email}
+                  />
+               </form>
+            );
+            }```
+      4. **Handling Multiple Inputs**
+         - When you need to handle multiple controlled input elements, you can add a name attribute to each element and let the handler function choose what to do based on the value of event.target.name.
+
+## SyntheticBaseEvent
+
+      * https://ko.reactjs.org/docs/events.html
+
+## Computed Property Name
+
+      * [참조 문서](https://velog.io/@yujuck/object-key%EC%97%90-%EB%B3%80%EC%88%98%EB%A5%BC-%EB%84%A3%EC%9C%BC%EB%A0%A4%EB%A9%B4-Computed-Property-Name)
