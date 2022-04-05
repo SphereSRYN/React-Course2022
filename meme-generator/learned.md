@@ -136,7 +136,8 @@
 
          5. How do you watch for a form submit? How can you trigger
             a form submit?
-         onSubmit handler on the `form` element.
+            - Can watch for the submit with an onSubmit handler on the `form` element.
+            - Can trigger the form submit with a button click.
 
 ## SyntheticBaseEvent
 
