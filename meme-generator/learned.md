@@ -111,6 +111,33 @@
       4. **Handling Multiple Inputs**
          - When you need to handle multiple controlled input elements, you can add a name attribute to each element and let the handler function choose what to do based on the value of event.target.name.
 
+## form recap
+
+         1. In a vanilla JS app, at what point in the form submission
+            process do you gather all the data from the filled-out form?
+         Right before the form is submitted.
+
+
+         2. In a React app, when do you gather all the data from
+            the filled-out form?
+         As the form is being filled out. The data is all held in local state.
+
+
+         3. Which attribute in the form elements (value, name, onChange, etc.)
+            should match the property name being held in state for that input?
+         `name` property.
+
+
+         4. What's different about saving the data from a checkbox element
+            vs. other form elements?
+         A checkbox uses the `checked` property to determine what should
+         be saved in state. Other form elements use the `value` property instead.
+
+
+         5. How do you watch for a form submit? How can you trigger
+            a form submit?
+         onSubmit handler on the `form` element.
+
 ## SyntheticBaseEvent
 
       * https://ko.reactjs.org/docs/events.html
