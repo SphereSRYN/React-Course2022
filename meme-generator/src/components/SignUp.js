@@ -1,13 +1,6 @@
 import React from "react";
-import "../css/SignUp.css";
-function SignUp() {
-  const [formData, setFormData] = React.useState({
-    email: "",
-    password: "",
-    passwordConfirm: "",
-    joinedNewsletter: true,
-  });
-
+import { useState } from "react";
+export default function SignUp() {
   /**
    * Challenge: Connect the form to local state
    *
@@ -18,78 +11,84 @@ function SignUp() {
    * 3. When the user clicks "Sign up", check if the
    *    password & confirmation match each other. If
    *    so, log "Successfully signed up" to the console.
-   *    If not, log "passwords do not match" to the console.
+   *    If not, log "passwords to not match" to the console.
    * 4. Also when submitting the form, if the person checked
    *    the "newsletter" checkbox, log "Thanks for signing
    *    up for our newsletter!" to the console.
    */
 
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+    confirmPassword: "",
+    okayToEmail: true,
+  });
+
   function handleChange(event) {
-    const { name, value, type, checked } = event.target;
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      [name]: type === "checkbox" ? checked : value,
-    }));
+    console.log(event.target);
+    const { name, type, value, checked } = event.target;
+    setFormData((prevFormData) => {
+      return {
+        ...prevFormData,
+        [name]: type === "checked" ? checked : value,
+      };
+    });
   }
 
   function handleSubmit(event) {
     event.preventDefault();
-    if (formData.password === formData.passwordConfirm) {
+    if (formData.password === formData.confirmPassword) {
       console.log("Successfully signed up");
     } else {
-      console.log("Passwords do not match");
-      return;
+      console.log("passwords to not match");
     }
-
-    if (formData.joinedNewsletter) {
+    if (formData.okayToEmail) {
       console.log("Thanks for signing up for our newsletter!");
     }
   }
 
   return (
-    <div className="form-container-body">
-      <div className="form-container">
-        <form className="form" onSubmit={handleSubmit}>
-          <input
-            type="email"
-            placeholder="Email address"
-            className="form--input"
-            name="email"
-            onChange={handleChange}
-            value={formData.email}
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            className="form--input"
-            name="password"
-            onChange={handleChange}
-            value={formData.password}
-          />
-          <input
-            type="password"
-            placeholder="Confirm password"
-            className="form--input"
-            name="passwordConfirm"
-            onChange={handleChange}
-            value={formData.passwordConfirm}
-          />
+    <div className="form-container">
+      <form className="form" onSubmit={handleSubmit}>
+        <input
+          name="email"
+          type="email"
+          placeholder="Email address"
+          className="form--input"
+          onChange={handleChange}
+          value={formData.email}
+        />
+        <input
+          name="password"
+          type="password"
+          placeholder="Password"
+          className="form--input"
+          onChange={handleChange}
+          value={formData.password}
+        />
+        <input
+          name="confirmPassword"
+          type="password"
+          placeholder="Confirm password"
+          className="form--input"
+          onChange={handleChange}
+          value={formData.confirmPassword}
+        />
 
-          <div className="form--marketing">
-            <input
-              id="okayToEmail"
-              type="checkbox"
-              name="joinedNewsletter"
-              onChange={handleChange}
-              checked={formData.joinedNewsletter}
-            />
-            <label htmlFor="okayToEmail">I want to join the newsletter</label>
-          </div>
-          <button className="form--submit">Sign up</button>
-        </form>
-      </div>
+        <div className="form--marketing">
+          <input
+            id="okayToEmail"
+            name="okayToEmail"
+            type="checkbox"
+            onChange={handleChange}
+            value={formData.okayToEmail}
+          />
+          <label htmlFor="okayToEmail">I want to join the newsletter</label>
+        </div>
+        <button className="form--submit" onChange={handleSubmit}>
+          Sign up
+        </button>
+      </form>
     </div>
   );
 }
-
-export default SignUp;

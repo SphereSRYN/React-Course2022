@@ -1,5 +1,5 @@
-## Intro
-
+ <h1>Intro</h1>
+* * *
 이부분 만들면서 목표가 있다면...
 
 - css
@@ -7,6 +7,7 @@
   처음 유튭강의 보고 styled-component를 알게됐을 때 너무나 신세계 같고 즐거웠는데, styled-component도 어느정도 한계는 있었다. 정말 하나하나 다 태그로 만들어서 적용해줘야 하는...그런...불편함이랄까?호호 게으른완벽주의자 성향에서 조금 탈피중인 나이지만 조금이나마 효율성을 더 따지는 나이기에 이참에 작은 프로젝트에 tailwind를 적용하면서 배워나갈 생각이다.
 - react
   ![무엇을배울까용](./what_we_will_learn.jpg)
+  <br/><br/>
 
 # I learned
 
@@ -66,48 +67,51 @@
 
       3. **Controlled Components**
 
-         ```export default function Form() {
-            const [formData, setFormData] = React.useState({
-               firstName: "",
-               lastName: "",
-               email: "",
-            });
+```javascript
+export default function Form() {
+  const [formData, setFormData] = React.useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+  });
 
-            function handleChange(event) {
-               setFormData((prevFormData) => {
-                  return {
-                  ...prevFormData,
-                  [event.target.name]: event.target.value,
-                  };
-               });
-            }
+  function handleChange(event) {
+    setFormData((prevFormData) => {
+      return {
+        ...prevFormData,
+        [event.target.name]: event.target.value,
+      };
+    });
+  }
 
-            return (
-               <form>
-                  <input
-                  type="text"
-                  placeholder="First Name"
-                  onChange={handleChange}
-                  name="firstName"
-                  value={formData.firstName}
-                  />
-                  <input
-                  type="text"
-                  placeholder="Last Name"
-                  onChange={handleChange}
-                  name="lastName"
-                  value={formData.lastName}
-                  />
-                  <input
-                  type="email"
-                  placeholder="Email"
-                  onChange={handleChange}
-                  name="email"
-                  value={formData.email}
-                  />
-               </form>
-            );
-            }```
+  return (
+    <form>
+      <input
+        type="text"
+        placeholder="First Name"
+        onChange={handleChange}
+        name="firstName"
+        value={formData.firstName}
+      />
+      <input
+        type="text"
+        placeholder="Last Name"
+        onChange={handleChange}
+        name="lastName"
+        value={formData.lastName}
+      />
+      <input
+        type="email"
+        placeholder="Email"
+        onChange={handleChange}
+        name="email"
+        value={formData.email}
+      />
+    </form>
+  );
+}
+```
+
       4. **Handling Multiple Inputs**
          - When you need to handle multiple controlled input elements, you can add a name attribute to each element and let the handler function choose what to do based on the value of event.target.name.
 
@@ -146,3 +150,48 @@
 ## Computed Property Name
 
       * [참조 문서](https://velog.io/@yujuck/object-key%EC%97%90-%EB%B3%80%EC%88%98%EB%A5%BC-%EB%84%A3%EC%9C%BC%EB%A0%A4%EB%A9%B4-Computed-Property-Name)
+
+## UseEffect: Interact with an Api(outside of your app)
+
+What are React's primary tasks?
+
+- work with the DOM/browser to render UI to the page
+- Manage state for us between render cycles (i.e. state values are "remembered" from one render to the next)
+- Keep the UI updatated whenever state changes occur
+
+What can't React handle on its own?
+
+- (Out)side Effects!
+  - localStorage
+  - API/database interactions
+  - Subscripttions (e.g. web sockets)
+  - Syncing 2 different internal states together
+  - Basically anything that React isn't in charge of
+
+===> 솔루션으로 UseEffect() 줌 ㅎ
+
+### side Effect
+
+      1. What is a "side effect" in React? What are some examples?
+
+      - Any code that affects an outside system.
+      - local storage, API, websockets, two states to keep in sync
+
+      2. What is NOT a "side effect" in React? Examples?
+
+      - Anything that React is in charge of.
+      - Maintaining state, keeping the UI in sync with the data,
+        render DOM elements
+
+      3. When does React run your useEffect function? When does it NOT run
+        the effect function?
+
+      - As soon as the component loads (first render)
+      - On every re-render of the component (assuming no dependencies array)
+      - Will NOT run the effect when the values of the dependencies in the
+        array stay the same between renders
+
+      4. How would you explain what the "dependecies array" is?
+
+      - Second paramter to the useEffect function
+      - A way for React to know whether it should re-run the effect function
